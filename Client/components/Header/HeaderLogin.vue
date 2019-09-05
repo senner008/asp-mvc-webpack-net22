@@ -2,25 +2,27 @@
     <div>
 
         <ul class="navbar-nav">
-            <div v-if="isSignedin">
-                <li class="nav-item">
+     
+                <li v-if="isSignedin" class="nav-item">
                     <a class="nav-link text-dark" asp-area="Identity" href="/Identity/Account/Manage/Index"
                         title="Manage">Hello
                         {{userName}}</a>
                 </li>
-                <form slot="return-url" class="form-inline">
+                <li v-if="isSignedin" class="nav-item">
+                    <form class="form-inline">
                     <button type="submit" @click.prevent="logout"
                         class="nav-link btn btn-link text-dark">Logout</button>
-                </form>
-            </div>
-            <div v-else>
-                <li class="nav-item">
+                 </form>
+                </li>
+            
+    
+                <li v-if="!isSignedin" class="nav-item">
                     <a class="nav-link text-dark" asp-area="Identity" href="/Identity/Account/Register">Register</a>
                 </li>
-                <li class="nav-item">
+                <li v-if="!isSignedin" class="nav-item">
                     <a class="nav-link text-dark" asp-area="Identity" href="/Identity/Account/Login">Login</a>
                 </li>
-            </div>
+     
         </ul>
     </div>
 
