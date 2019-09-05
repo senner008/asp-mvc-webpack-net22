@@ -1,5 +1,5 @@
 ﻿"use strict";
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: 'development',
@@ -8,20 +8,20 @@ module.exports = {
         filename: 'js/[name].js'
     },
     module: {
-        // rules: [
-        //     {
-        //         test: /\.css$/,
-        //         use: [
-        //             "vue-style-loader",
-        //             'style-loader',
-        //             "css-loader"
-        //         ]
-        //     }
-        // ]
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    "vue-style-loader",
+                    'style-loader',
+                    "css-loader"
+                ]
+            }
+        ]
     },
     plugins: [
-        // new MiniCssExtractPlugin({
-        //     filename: "css/[name].css"
-        // })
+        new MiniCssExtractPlugin({
+            filename: "css/[name].css"
+        })
     ]
 };
