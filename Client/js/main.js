@@ -2,6 +2,9 @@ if (module.hot) {
   module.hot.accept();
 }
 
+import('../bootstrap/dist/css/bootstrap.css').then(res => {
+  import('./styles.css')
+});
 import DynamicLoadjQuery from "./DynamicLoadjQuery.js";
 
 function switchColor(color) {

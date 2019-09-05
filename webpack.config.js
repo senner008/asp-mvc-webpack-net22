@@ -39,6 +39,12 @@ const commonConfig = {
         ignored: /node_modules/
     },
     module: {
+        rules:[
+            {
+                test:/\.css$/,
+                use:['style-loader','css-loader']
+            }
+       ]
         // rules: [
         //     {
         //         test: /\.tsx?$/,
