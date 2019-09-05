@@ -14,8 +14,6 @@
                         class="nav-link btn btn-link text-dark">Logout</button>
                  </form>
                 </li>
-            
-    
                 <li v-if="!isSignedin" class="nav-item">
                     <a class="nav-link text-dark" asp-area="Identity" href="/Identity/Account/Register">Register</a>
                 </li>

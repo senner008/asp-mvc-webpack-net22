@@ -18,16 +18,10 @@
   export default class IndexWelcome extends Vue {
     @Prop() private user!: string;
 
-    count: number = 0;
-    incrementCount() {
-      this.count++;
-    }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-  .welcome {
-    color: red;
-  }
+
 </style>

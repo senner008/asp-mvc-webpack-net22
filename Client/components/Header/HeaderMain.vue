@@ -22,15 +22,10 @@
 
 import {Component, Prop, Vue} from 'vue-property-decorator';
 
+
 @Component
 export default class HeaderMain extends Vue {
-    @Prop() private user!: string;
 
-    count: number = 0;
-
-    mounted() {
-        console.log(jQuery)
-    }
 }
 
 </script>

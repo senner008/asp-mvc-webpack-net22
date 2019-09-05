@@ -3,7 +3,8 @@ if (module.hot) {
 }
 
 import 'bootstrap/dist/css/bootstrap.css';
-import 'css/styles.css';
+import 'bootstrap';
+
 
 import Vue from 'vue';
 import App from './App.vue';
@@ -27,3 +28,5 @@ new Vue({
   store,
   // render: (h) => h(App),
 }).$mount('#app');
+
+$('#app').show();
