@@ -7,7 +7,7 @@ import('../bootstrap/dist/css/bootstrap.css').then(res => {
 });
 import DynamicLoadjQuery from "./DynamicLoadjQuery.js";
 
-function switchColor(color) {
+function randomColor(color) {
 
   DynamicLoadjQuery(render);
   function render () {
@@ -16,7 +16,7 @@ function switchColor(color) {
 
 }
 
-document.querySelector("#switchColor").addEventListener('click', function () {
+document.querySelector("#justAButton").addEventListener('click', function () {
   var colors = ["blue", "green", "red"]; 
-  switchColor(colors[Math.floor(Math.random() * 3)])
+  randomColor(colors[Math.floor(Math.random() * 3)])
 })
