@@ -3,7 +3,7 @@ if (module.hot) {
 }
 
 import('../bootstrap/dist/css/bootstrap.css').then(res => {
-  import('./styles.css')
+  import('../css/styles.css')
 });
 import DynamicLoadjQuery from "./DynamicLoadjQuery.js";
 
