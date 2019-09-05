@@ -11,8 +11,14 @@ import router from './router';
 import store from './store';
 import './registerServiceWorker';
 
-import HelloWorld from "./components/HelloWorld.vue"
-Vue.component('hello-world' , HelloWorld);
+import IndexWelcome from './components/Index/IndexWelcome.vue';
+import HeaderMain from './components/Header/HeaderMain.vue';
+import HeaderLogin from './components/Header/HeaderLogin.vue';
+
+
+Vue.component('index-welcome' , IndexWelcome);
+Vue.component('header-main' , HeaderMain);
+Vue.component('header-login' , HeaderLogin);
 
 Vue.config.productionTip = false;
 
