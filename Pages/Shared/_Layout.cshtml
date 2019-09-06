@@ -5,12 +5,12 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@ViewData["Title"] - asp_mvc_webpack</title>
 </head>
 
-<body>
-    <div id="app" style="display: none;">
+<body style="height: 100vh;">
+    <div id="app" style="display: none;  height: 100vh;  display: flex;flex-direction: column; ">
         <header-main>
             <header-login slot="partial-login" is-signedin="@(SignInManager.IsSignedIn(User))" user-name="@User.Identity.Name">
                
@@ -19,15 +19,19 @@
 
             </header-login>
         </header-main>
-
-        <div class="container">
+        <div style="overflow-y: scroll">
+             <div class="container" style="flex-grow: 1; ">
             <partial name="_CookieConsentPartial" />
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
         </div>
+        </div> 
+       
 
-        <footer class="border-top footer text-muted">
+        <footer class="border-top footer text-muted" style="position: -webkit-sticky;
+    position: sticky; 
+    bottom : 0; padding: 10px;">
             <div class="container">
                 &copy; 2019 - asp_mvc_webpack - <a asp-area="" asp-page="/Privacy">Privacy</a>
             </div>

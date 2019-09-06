@@ -1,33 +1,38 @@
 <template>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container"><a class="navbar-brand" asp-area="" asp-page="/Index">asp_mvc_webpack</a><button
-                    class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-
-                    <slot name="partial-login"></slot>
-
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" href="/Index">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" href="/Privacy">Privacy</a></li>
-                    </ul>
-                </div>
+        <b-navbar toggleable="lg" type="light" variant="light" style="border-bottom: 1px solid lightgrey;">
+            <div class="container">
+                <b-navbar-brand href="/Index">asp_mvc_webpack</b-navbar-brand>
+                <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+                <b-collapse id="nav-collapse" is-nav>
+                    <b-navbar-nav>
+                        <b-nav-item href="/Index" right>Home</b-nav-item>
+                        <b-nav-item href="/Privacy">Privacy</b-nav-item>
+                    </b-navbar-nav>
+                    <b-navbar-nav class="ml-auto">
+                        <slot name="partial-login"></slot>
+                    </b-navbar-nav>
+                </b-collapse>
             </div>
-        </nav>
+        </b-navbar>
     </header>
 </template>
 <script lang="ts">
+    import {
+        Component,
+        Prop,
+        Vue
+    } from 'vue-property-decorator';
+    import BootstrapVue from 'bootstrap-vue';
+    import 'bootstrap/dist/css/bootstrap.css'
+    import 'bootstrap-vue/dist/bootstrap-vue.css'
+    Vue.use(BootstrapVue)
 
-import {Component, Prop, Vue} from 'vue-property-decorator';
 
+    @Component
+    export default class HeaderMain extends Vue {
 
-@Component
-export default class HeaderMain extends Vue {
-
-}
-
+    }
 </script>
 < !-- Add "scoped" attribute to limit CSS to this component only -->
     <style scoped lang="less">
