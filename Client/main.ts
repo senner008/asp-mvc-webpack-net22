@@ -30,7 +30,3 @@ new Vue({
   store,
   // render: (h) => h(App),
 }).$mount('#app');
-
-// const elem : any = document.querySelector("#app")!;
-
-// elem.style.display = "block";
