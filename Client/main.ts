@@ -1,6 +1,6 @@
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 
 import 'bootstrap/dist/css/bootstrap.css';
 import $ from "jquery";
