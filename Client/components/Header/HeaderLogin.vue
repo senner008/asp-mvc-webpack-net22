@@ -39,11 +39,10 @@
         @Prop({type: String}) private userName!: string;
 
         logout() {
-            $.ajax({
-                type: 'post',
-                url: '/Account/Logout',
+            fetch('/Account/Logout', {
+                  method: 'POST'
             })
-            .done(function (data) {
+            .then(data =>  {
                 window.location.href = "https://localhost:5001/";
             });
         }

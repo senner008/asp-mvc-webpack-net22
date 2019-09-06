@@ -3,8 +3,9 @@ if (module.hot) {
 }
 
 import 'bootstrap/dist/css/bootstrap.css';
-// import 'bootstrap';
+import $ from "jquery";
 
+console.log($);
 
 import Vue from 'vue';
 import App from './App.vue';
@@ -30,4 +31,6 @@ new Vue({
   // render: (h) => h(App),
 }).$mount('#app');
 
-$('#app').show();
+// const elem : any = document.querySelector("#app")!;
+
+// elem.style.display = "block";

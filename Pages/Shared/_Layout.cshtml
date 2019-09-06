@@ -7,10 +7,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@ViewData["Title"] - asp_mvc_webpack</title>
+
 </head>
 
 <body style="height: 100vh;">
-    <div id="app" style="display: none;  height: 100vh;  display: flex;flex-direction: column; ">
+    <div id="app" style="  height: 100vh;  display: flex;flex-direction: column; ">
         <header-main>
             <header-login slot="partial-login" is-signedin="@(SignInManager.IsSignedIn(User))" user-name="@User.Identity.Name">
                
@@ -19,8 +20,9 @@
 
             </header-login>
         </header-main>
-        <div style="overflow-y: scroll">
-             <div class="container" style="flex-grow: 1; ">
+
+        <div style="overflow-y: scroll; flex-grow: 1;">
+             <div class="container">
             <partial name="_CookieConsentPartial" />
             <main role="main" class="pb-3">
                 @RenderBody()
