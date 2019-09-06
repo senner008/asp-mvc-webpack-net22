@@ -10,8 +10,8 @@
 
 </head>
 
-<body style="height: 100vh;">
-    <div id="app" style="  height: 100vh;  display: flex;flex-direction: column; ">
+<body style="height: 100vh; display: none;">
+    <div id="app" style=" height: 100vh; display: flex; flex-direction: column; ">
         <header-main>
             <header-login slot="partial-login" is-signedin="@(SignInManager.IsSignedIn(User))" user-name="@User.Identity.Name">
                

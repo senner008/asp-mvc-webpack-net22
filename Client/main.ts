@@ -5,14 +5,17 @@ if (module.hot) {
 import 'bootstrap/dist/css/bootstrap.css';
 import $ from "jquery";
 
-console.log($);
+declare global {
+  interface Window { $: any; }
+}
+
+window.$ = $;
 
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
-
 
 import IndexWelcome from './components/Index/IndexWelcome.vue';
 import HeaderMain from './components/Header/HeaderMain.vue';
@@ -30,3 +33,5 @@ new Vue({
   store,
   // render: (h) => h(App),
 }).$mount('#app');
+
+$('body').show();
