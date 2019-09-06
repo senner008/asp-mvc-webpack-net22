@@ -31,7 +31,7 @@ const commonConfig = {
         extensions: ['.ts', '.tsx', '.js', '.vue'],
         modules: [srcPath, "node_modules"],
         alias: {
-            'vue$': 'vue/dist/vue.common.js',
+            'vue$': 'vue/dist/vue.esm.js', // 'vue/dist/vue.common.js' for webpack 1 
             'jquery': "jquery/src/jquery"
         }
     },
@@ -89,8 +89,7 @@ const commonConfig = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        }),
-
+        })
     ]
 };
 
