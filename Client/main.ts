@@ -29,7 +29,7 @@ Vue.component('header-login' , HeaderLogin);
 Vue.config.productionTip = false;
 
 new Vue({
-  // router,
+  router,
   store,
   // render: (h) => h(App),
 }).$mount('#app');

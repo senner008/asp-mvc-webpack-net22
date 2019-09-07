@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 
+
 namespace asp_mvc_webpack
 {
     public class Startup
@@ -73,7 +74,14 @@ namespace asp_mvc_webpack
 
             app.UseAuthentication();
 
-            app.UseMvc();
+            app.UseMvc(routes => {
+            routes.MapSpaFallbackRoute(
+                name: "spa-fallback",
+                defaults: new { controller = "Index", action = "Index" });
+            });
+        //handle client side routes
+
+
         }
     }
 }

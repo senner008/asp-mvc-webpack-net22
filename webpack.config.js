@@ -57,7 +57,7 @@ const commonConfig = {
             {
                 test: /\.tsx?$/,
                 use: [{
-                    loader: 'ts-loader',
+                    loader: 'ts-loader',                  
                     options: {
                         appendTsSuffixTo: [/\.vue$/]
                     }

@@ -29,5 +29,6 @@ namespace asp_mvc_webpack.Controllers
             await _signInManager.SignOutAsync();
             return Ok();
         }
+
     }
 }
